@@ -1,10 +1,15 @@
-def safe_divide(a,b):
+# Function to safely perform division and handle exceptions
+def safe_divide(a, b):
     try:
-        div = a/b
+        # Attempt division
+        div = a / b
+        print(div)  # Print the result
     except ZeroDivisionError:
-        print("Zero diviosn is not supported")
+        # Handle division by zero
+        print("Zero division is not supported")
     except Exception as e:
+        # Handle other exceptions
         print(f"An error occurred: {e}")
 
-
-safe_divide(5,0)
+# Example call
+safe_divide(5, 0)
